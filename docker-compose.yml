@@ -1,0 +1,14 @@
+version: '3'
+services:
+  api-gateway:
+    build: .
+    container_name: api-gateway
+    ports:
+      - "8080:8080"
+    restart: always
+    networks:
+      - dmz_net
+
+networks:
+  dmz_net:
+    driver: bridge
